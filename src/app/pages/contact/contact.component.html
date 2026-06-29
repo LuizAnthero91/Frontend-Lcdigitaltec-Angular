@@ -1,0 +1,150 @@
+<main class="contact-page">
+  <section class="contact-hero">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <span class="section-kicker">Fale com a gente</span>
+        <h1>Conte sua ideia.<br><span>Nós ajudamos a tirar do papel.</span></h1>
+        <p>
+          Preencha o formulário e envie sua mensagem diretamente pelo WhatsApp.
+          Sem cadastro, sem espera e sem complicção.
+        </p>
+
+        <div class="contact-benefits">
+          <article>
+            <span aria-hidden="true">⚡</span>
+            <div>
+              <strong>Resposta rápida</strong>
+              <small>Atendimento direto com nossa equipe.</small>
+            </div>
+          </article>
+          <article>
+            <span aria-hidden="true">◈</span>
+            <div>
+              <strong>Solução personalizada</strong>
+              <small>Entendemos seu momento antes de propor.</small>
+            </div>
+          </article>
+          <article>
+            <span aria-hidden="true">✓</span>
+            <div>
+              <strong>Conversa sem compromisso</strong>
+              <small>Explique sua necessidade e receba orientação.</small>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-heading">
+          <span class="whatsapp-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <path d="M16 3a13 13 0 0 0-11.3 19.4L3 29l6.8-1.8A13 13 0 1 0 16 3Z" />
+              <path class="phone" d="M11.1 8.8c.3-.1.7-.1 1 0 .3.1.5.6.7 1.1l.9 2.1c.2.4.1.8-.2 1.2l-1 1.2c-.2.2-.2.5-.1.7 1.1 2.3 2.9 4.1 5.2 5.2.3.1.6.1.8-.1l1.4-1.7c.3-.3.7-.4 1.1-.2l3.1 1.5c.4.2.6.6.5 1-.3 1.5-1.2 2.8-2.6 3.4-1.2.6-2.8.7-5.4-.4a16.5 16.5 0 0 1-9.1-9.1c-1-2.4-.8-4 .1-5.1.9-1 2-1 3.6-.8Z" />
+            </svg>
+          </span>
+          <div>
+            <h2>Solicite uma proposta</h2>
+            <p>Os campos com * são obrigatórios.</p>
+          </div>
+        </div>
+
+        <form #contactForm="ngForm" (ngSubmit)="sendToWhatsApp(contactForm)" novalidate>
+          <div class="field-row">
+            <label>
+              Nome completo *
+              <input
+                type="text"
+                name="name"
+                [(ngModel)]="contact.name"
+                #name="ngModel"
+                placeholder="Como podemos chamar você?"
+                autocomplete="name"
+                maxlength="80"
+                required
+              />
+              @if (name.invalid && name.touched) {
+                <small class="field-error">Informe seu nome.</small>
+              }
+            </label>
+
+            <label>
+              Empresa
+              <input
+                type="text"
+                name="company"
+                [(ngModel)]="contact.company"
+                placeholder="Nome da sua empresa"
+                autocomplete="organization"
+                maxlength="100"
+              />
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>
+              Telefone
+              <input
+                type="tel"
+                name="phone"
+                [(ngModel)]="contact.phone"
+                placeholder="(31) 99999-9999"
+                autocomplete="tel"
+                inputmode="tel"
+                maxlength="20"
+              />
+            </label>
+
+            <label>
+              Serviço de interesse *
+              <select
+                name="service"
+                [(ngModel)]="contact.service"
+                #service="ngModel"
+                required
+              >
+                <option value="" disabled>Selecione uma opção</option>
+                @for (item of services; track item) {
+                  <option [value]="item">{{ item }}</option>
+                }
+              </select>
+              @if (service.invalid && service.touched) {
+                <small class="field-error">Selecione um serviço.</small>
+              }
+            </label>
+          </div>
+
+          <label>
+            Conte um pouco sobre o projeto *
+            <textarea
+              name="message"
+              [(ngModel)]="contact.message"
+              #message="ngModel"
+              placeholder="Descreva o que você precisa, seus objetivos e prazos..."
+              rows="5"
+              minlength="10"
+              maxlength="1000"
+              required
+            ></textarea>
+            <span class="field-meta">
+              @if (message.invalid && message.touched) {
+                <small class="field-error">Escreva pelo menos 10 caracteres.</small>
+              } @else {
+                <small>Sua mensagem será aberta no WhatsApp.</small>
+              }
+              <small>{{ contact.message.length }}/1000</small>
+            </span>
+          </label>
+
+          <button class="submit-button" type="submit">
+            <span>Enviar pelo WhatsApp</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+
+          <p class="privacy-note">
+            Ao continuar, o WhatsApp será aberto com a mensagem preenchida. O site não armazena seus dados.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
