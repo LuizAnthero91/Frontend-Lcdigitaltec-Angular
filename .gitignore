@@ -1,0 +1,37 @@
+/dist
+/tmp
+/out-tsc
+/.angular/cache
+/node_modules
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+*.log
+.npm/
+.cache/
+.sass-cache/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+credentials*.json
+secrets*.json
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Test and analysis output
+/coverage
+/.nyc_output
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.iml

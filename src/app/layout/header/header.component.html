@@ -1,0 +1,33 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a routerLink="/" class="brand" aria-label="LC Digital Tec" (click)="closeMenu()">
+      <img src="/assets/logo.svg?v=2" alt="LC Digital Tec" />
+      <span>
+        <strong>LC Digital Tec</strong>
+        <small>Tecnologia que impulsiona resultados</small>
+      </span>
+    </a>
+
+    <button class="menu-button" type="button" (click)="toggleMenu()" aria-label="Abrir menu">
+      ☰
+    </button>
+
+    <nav class="nav-menu" [class.open]="menuOpen">
+      <a routerLink="/" fragment="sobre" (click)="closeMenu()">Sobre nós</a>
+      <a routerLink="/" fragment="servicos" (click)="closeMenu()">Serviços</a>
+      <a routerLink="/clientes" (click)="closeMenu()">Clientes</a>
+      <a routerLink="/" fragment="contato" (click)="closeMenu()">Contato</a>
+      <a routerLink="/admin/login" class="login-link" (click)="closeMenu()">👤 Login</a>
+      <a
+        href="https://wa.me/5531986204749?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20uma%20proposta."
+        class="proposal-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Pedir proposta pelo WhatsApp"
+        (click)="closeMenu()"
+      >
+        Pedir proposta →
+      </a>
+    </nav>
+  </div>
+</header>
