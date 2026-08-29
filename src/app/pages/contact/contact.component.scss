@@ -8,9 +8,9 @@
   overflow: hidden;
   padding: 70px 0 82px;
   background:
-    radial-gradient(circle at 8% 15%, rgba(56, 189, 248, .16), transparent 28%),
-    radial-gradient(circle at 94% 8%, rgba(124, 58, 237, .12), transparent 25%),
-    linear-gradient(145deg, #f8fbff, #eef5ff);
+    radial-gradient(circle at 8% 15%, rgba(20, 184, 166, .16), transparent 28%),
+    radial-gradient(circle at 94% 8%, rgba(245, 158, 11, .12), transparent 25%),
+    linear-gradient(145deg, #f7fbfa, #eaf6f2);
 }
 
 .contact-hero::before {
@@ -34,7 +34,7 @@
 
 .contact-copy h1 {
   margin: 20px 0 18px;
-  color: #10224a;
+  color: var(--primary-dark);
   font-size: clamp(2.65rem, 5vw, 4.8rem);
   line-height: 1.01;
   letter-spacing: -.055em;
@@ -74,7 +74,7 @@
   background: #fff;
   border: 1px solid #dce8fa;
   border-radius: 13px;
-  box-shadow: 0 8px 22px rgba(21, 52, 105, .08);
+  box-shadow: 0 8px 22px rgba(15, 61, 55, .08);
   font-size: 1.15rem;
   font-weight: 900;
 }

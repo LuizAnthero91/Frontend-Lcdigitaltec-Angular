@@ -4,14 +4,14 @@
   place-items: center;
   padding: 48px 20px;
   background:
-    radial-gradient(circle at top right, rgba(37, 99, 235, 0.28), transparent 35%),
-    linear-gradient(135deg, #f8fbff, #eaf3ff);
+    radial-gradient(circle at top right, rgba(20, 184, 166, 0.22), transparent 35%),
+    linear-gradient(135deg, #f7fbfa, #eaf6f2);
 }
 
 .login-card {
   width: min(460px, 100%);
   background: #fff;
-  border: 1px solid #e8eef7;
+  border: 1px solid var(--border);
   border-radius: 28px;
   padding: 34px;
   box-shadow: var(--shadow);
@@ -76,7 +76,7 @@
     border: 0;
     border-radius: 14px;
     margin-top: 8px;
-    background: linear-gradient(135deg, var(--primary), #2563eb);
+    background: linear-gradient(135deg, var(--primary), #0f9f8f);
     color: #fff;
     font-weight: 1000;
     cursor: pointer;

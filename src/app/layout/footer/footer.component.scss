@@ -1,6 +1,6 @@
 .footer {
-  background: linear-gradient(135deg, #061a3d, #08265a);
-  color: #dbeafe;
+  background: linear-gradient(135deg, #061f20, #073b3a);
+  color: #d7f3ee;
   padding: 14px 0 8px;
 }
 
@@ -18,7 +18,7 @@
 .footer a,
 .footer span {
   display: block;
-  color: #c7d2fe;
+  color: #bde5dc;
   text-decoration: none;
   margin-bottom: 6px;
   font-size: 0.78rem;
@@ -31,12 +31,6 @@
 .brand-line {
   display: flex;
   align-items: center;
-  gap: 12px;
-
-  img {
-    width: 38px;
-    height: 38px;
-  }
 
   strong {
     display: block;
@@ -68,7 +62,7 @@
     }
 
     .whatsapp-phone {
-      fill: #061a3d;
+      fill: #061f20;
     }
   }
 }
@@ -80,7 +74,7 @@
   padding: 10px 12px;
 
   p {
-    color: #dbeafe;
+    color: #d7f3ee;
     margin-top: 0;
     line-height: 1.35;
     font-size: 0.75rem;
@@ -111,7 +105,7 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(219, 234, 254, 0.15);
+  border-top: 1px solid rgba(215, 243, 238, 0.15);
   margin-top: 8px;
   padding-top: 7px;
   display: flex;

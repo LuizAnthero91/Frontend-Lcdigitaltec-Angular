@@ -18,12 +18,6 @@ interface Client {
   external?: boolean;
 }
 
-interface Metric {
-  icon: string;
-  value: string;
-  label: string;
-}
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -34,24 +28,27 @@ interface Metric {
 export class HomeComponent {
   services: Service[] = [
     {
-      icon: '🖥️',
-      title: 'Sites e Landing Pages',
-      description: 'Sites profissionais, rápidos e responsivos que geram credibilidade e novos negócios.'
+      icon: 'WEB',
+      title: 'Sites profissionais',
+      description: 'Páginas rápidas, responsivas e preparadas para apresentar sua empresa com clareza.',
+      url: '/contato'
     },
     {
-      icon: '🛒',
-      title: 'E-commerce e Vendas',
-      description: 'Lojas virtuais completas com pagamentos online, integrações e gestão de pedidos.'
+      icon: 'SHOP',
+      title: 'Lojas virtuais',
+      description: 'Experiências de compra simples para divulgar produtos e transformar visitas em vendas.',
+      url: '/contato'
     },
     {
-      icon: '📊',
-      title: 'ERP para Empresas',
-      description: 'Sistema de gestão integrado para otimizar processos, reduzir custos e aumentar resultados.'
+      icon: 'ERP',
+      title: 'Sistemas de gestão',
+      description: 'Painéis sob medida para organizar atendimentos, clientes, financeiro e operação.',
+      
     },
     {
-      icon: '📍',
-      title: 'Rastreamento Veicular',
-      description: 'Monitoramento em tempo real, histórico de rotas, alertas e relatórios inteligentes.',
+      icon: 'GPS',
+      title: 'Rastreamento veicular',
+      description: 'Monitoramento de veículos e frotas com foco em controle, segurança e praticidade.',
       url: 'https://traccar.lcdigitaltec.com.br/',
       external: true
     }
@@ -61,7 +58,7 @@ export class HomeComponent {
     {
       logo: 'COMPAQ',
       name: 'Compaq Reboque',
-      type: 'Site Institucional',
+      type: 'Site institucional',
       tag: 'Site profissional',
       projectUrl: 'https://compaqreboque.com.br/',
       external: true
@@ -69,40 +66,26 @@ export class HomeComponent {
     {
       logo: 'Cinderela',
       name: 'Cinderela de Ibirité',
-      type: 'Site e E-commerce',
-      tag: 'Loja Virtual',
+      type: 'Site e e-commerce',
+      tag: 'Loja virtual',
       projectUrl: 'https://cinderelaibirite.com.br/',
       external: true
     },
     {
       logo: 'TORÁ',
       name: 'Auto Reboque Torá',
-      type: 'Site e Sistema Web',
-      tag: 'Sistema Web',
-      projectUrl: '#contato'
+      type: 'Site e sistema web',
+      tag: 'Sistema web',
+      projectUrl: 'https://reboquetora.lcdigitaltec.com.br/login',
+      external: true
     },
     {
       logo: 'Traccar',
       name: 'Traccar',
-      type: 'Rastreamento Veicular',
+      type: 'Rastreamento veicular',
       tag: 'Rastreamento',
       projectUrl: 'https://traccar.lcdigitaltec.com.br/',
       external: true
     }
-  ];
-
-  metrics: Metric[] = [
-
-    {
-      icon: '🎧',
-      value: 'Suporte 24/7',
-      label: 'Atendimento rápido e especializado'
-    },
-    {
-      icon: '🛡️',
-      value: '99,9%',
-      label: 'Uptime dos sistemas e monitoramento'
-    },
-
   ];
 }

@@ -1,7 +1,7 @@
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <span class="section-kicker">⚡ Soluções digitais completas para sua empresa</span>
+      <span class="section-kicker">Soluções digitais completas para sua empresa</span>
 
       <h1>
         <span>Transforme sua empresa</span>
@@ -14,22 +14,15 @@
       </p>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" routerLink="/contato">✈ Pedir proposta</a>
-        <a class="btn btn-outline" href="#clientes">👁 Conhecer projetos</a>
-      </div>
-
-      <div class="hero-benefits">
-        <span>🚀 Tecnologia de ponta</span>
-        <span>🎧 Suporte especializado</span>
-        <span>📊 Resultados mensuráveis</span>
-        <span>🧩 Soluções personalizadas</span>
+        <a class="btn btn-primary" routerLink="/contato">Pedir proposta</a>
+        <a class="btn btn-outline" href="#clientes">Conhecer projetos</a>
       </div>
     </div>
 
     <div class="hero-visual" aria-label="Prévia do painel LC Digital Tec">
       <div class="dashboard-card">
         <div class="dash-sidebar">
-          <strong>LC</strong>
+          <strong>Painel</strong>
           <span class="active">Dashboard</span>
           <span>Vendas</span>
           <span>Clientes</span>
@@ -50,7 +43,7 @@
           <div class="kpis">
             <div>
               <small>Receita</small>
-              <strong></strong>
+              <strong>R$ 42 mil</strong>
               <span>+18,2%</span>
             </div>
             <div>
@@ -103,13 +96,6 @@
           <div>
             <h3>{{ service.title }}</h3>
             <p>{{ service.description }}</p>
-            <a
-              [href]="service.url ?? '#contato'"
-              [attr.target]="service.external ? '_blank' : null"
-              [attr.rel]="service.external ? 'noopener noreferrer' : null"
-            >
-              Saiba mais →
-            </a>
           </div>
         </article>
       }
@@ -144,39 +130,5 @@
         </article>
       }
     </div>
-  </div>
-</section>
-
-<section id="sobre" class="about-section">
-  <div class="container about-grid">
-    <div>
-      <span class="section-kicker">Sobre a LC Digital Tec</span>
-      <h2>Um site bonito precisa vender, passar confiança e mostrar solução.</h2>
-    </div>
-
-    <div class="about-text">
-      <p>
-        A LC Digital Tec desenvolve presença digital e sistemas para empresas que precisam
-        melhorar vendas, organização e atendimento. A proposta é unir visual moderno,
-        tecnologia prática e soluções que realmente ajudam no dia a dia do negócio.
-      </p>
-      <p>
-        Este frontend foi pensado como vitrine comercial e também como portfólio técnico:
-        Angular, responsividade, componentes reutilizáveis e estrutura
-        preparada para backend futuro.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="metrics-section">
-  <div class="container metrics-grid">
-    @for (metric of metrics; track metric.value) {
-      <article class="metric-card">
-        <div>{{ metric.icon }}</div>
-        <strong>{{ metric.value }}</strong>
-        <span>{{ metric.label }}</span>
-      </article>
-    }
   </div>
 </section>

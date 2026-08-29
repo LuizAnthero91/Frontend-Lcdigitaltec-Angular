@@ -1,17 +1,17 @@
 :root {
-  --primary: #0f4cff;
-  --primary-dark: #0b2d89;
-  --cyan: #06b6d4;
-  --purple: #7c3aed;
-  --orange: #ff6b00;
-  --green: #10b981;
-  --text: #0f172a;
-  --muted: #64748b;
-  --bg: #f8fbff;
+  --primary: #0f766e;
+  --primary-dark: #073b3a;
+  --cyan: #14b8a6;
+  --purple: #334155;
+  --orange: #f59e0b;
+  --green: #16a34a;
+  --text: #102421;
+  --muted: #64746f;
+  --bg: #f5f8f6;
   --surface: #ffffff;
-  --border: #e2e8f0;
-  --footer: #061a3d;
-  --shadow: 0 10px 28px rgba(21, 52, 105, 0.09);
+  --border: #dfe8e4;
+  --footer: #061f20;
+  --shadow: 0 10px 28px rgba(15, 61, 55, 0.1);
   --radius: 15px;
 }
 
@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,10 +30,12 @@ body {
   color: var(--text);
   background: var(--bg);
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 a {
   color: inherit;
+  overflow-wrap: anywhere;
 }
 
 button,
@@ -54,8 +57,8 @@ img {
   align-items: center;
   gap: 8px;
   color: var(--primary);
-  background: #eaf2ff;
-  border: 1px solid #d5e5ff;
+  background: #e7f7f3;
+  border: 1px solid #c7ebe3;
   padding: 6px 13px;
   border-radius: 999px;
   font-size: 0.74rem;
@@ -79,15 +82,15 @@ img {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), #2563eb);
+  background: linear-gradient(135deg, var(--primary), #0f9f8f);
   color: #fff;
-  box-shadow: 0 16px 32px rgba(15, 76, 255, 0.28);
+  box-shadow: 0 16px 32px rgba(15, 118, 110, 0.26);
 }
 
 .btn-orange {
-  background: linear-gradient(135deg, #ff7a18, #ff4d00);
+  background: linear-gradient(135deg, #fbbf24, #d97706);
   color: #fff;
-  box-shadow: 0 16px 32px rgba(255, 107, 0, 0.22);
+  box-shadow: 0 16px 32px rgba(217, 119, 6, 0.22);
 }
 
 .btn-outline {

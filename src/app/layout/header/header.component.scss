@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(226, 232, 240, 0.9);
 }
@@ -17,13 +17,7 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
-
-  img {
-    width: 48px;
-    height: 48px;
-  }
 
   span {
     display: grid;
@@ -31,7 +25,7 @@
   }
 
   strong {
-    color: #081a3a;
+    color: var(--primary-dark);
     font-size: 1.25rem;
     line-height: 1;
   }
@@ -46,7 +40,7 @@
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: clamp(20px, 2.8vw, 44px);
+  gap: clamp(16px, 2.2vw, 34px);
 
   a {
     text-decoration: none;
@@ -60,16 +54,12 @@
   }
 }
 
-.login-link {
-  color: var(--primary) !important;
-}
-
 .proposal-link {
-  background: linear-gradient(135deg, #ff7a18, #ff4d00);
+  background: linear-gradient(135deg, #fbbf24, #d97706);
   color: #fff !important;
   padding: 12px 22px;
   border-radius: 8px;
-  box-shadow: 0 14px 28px rgba(255, 107, 0, 0.18);
+  box-shadow: 0 14px 28px rgba(217, 119, 6, 0.18);
 }
 
 .menu-button {
@@ -117,14 +107,17 @@
 }
 
 @media (max-width: 520px) {
-  .brand {
-    img {
-      width: 46px;
-      height: 46px;
-    }
+  .header-inner {
+    height: 60px;
+  }
 
+  .nav-menu {
+    top: 60px;
+  }
+
+  .brand {
     strong {
-      font-size: 1.05rem;
+      font-size: 1rem;
     }
 
     small {

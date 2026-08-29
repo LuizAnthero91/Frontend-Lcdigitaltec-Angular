@@ -23,40 +23,25 @@
       <div class="projects-grid">
         @for (project of projects; track project.name) {
           <article class="project-card" [class]="'project-card ' + project.theme">
-            <div class="project-preview" aria-hidden="true">
-              <div class="browser-bar">
+            <a
+              class="project-preview"
+              [href]="project.url"
+              [attr.target]="project.external ? '_blank' : null"
+              [attr.rel]="project.external ? 'noopener noreferrer' : null"
+              [style.background-image]="'url(' + project.image + ')'"
+              [attr.aria-label]="project.action + ': ' + project.name"
+            >
+              <div class="browser-bar" aria-hidden="true">
                 <i></i><i></i><i></i>
-                <span>lcdigitaltec.com.br</span>
+                <span>{{ project.url }}</span>
               </div>
 
-              <div class="preview-content">
-                <div class="preview-brand">
-                  <span>{{ project.icon }}</span>
-                  <strong>{{ project.name }}</strong>
-                </div>
-
-                @if (project.theme === 'tracking') {
-                  <div class="map-preview">
-                    <i class="route route-one"></i>
-                    <i class="route route-two"></i>
-                    <b class="pin pin-one"></b>
-                    <b class="pin pin-two"></b>
-                  </div>
-                } @else if (project.theme === 'erp') {
-                  <div class="dashboard-preview">
-                    <div><small>Atendimentos</small><strong>148</strong></div>
-                    <div><small>Em andamento</small><strong>24</strong></div>
-                    <div class="chart"><i></i><i></i><i></i><i></i><i></i></div>
-                  </div>
-                } @else {
-                  <div class="website-preview">
-                    <span>{{ project.eyebrow }}</span>
-                    <strong>Solução feita para o seu momento.</strong>
-                    <i></i>
-                  </div>
-                }
+              <div class="preview-copy">
+                <span>{{ project.eyebrow }}</span>
+                <strong>{{ project.name }}</strong>
+                <p>{{ project.highlight }}</p>
               </div>
-            </div>
+            </a>
 
             <div class="project-body">
               <span class="project-type">{{ project.eyebrow }}</span>
