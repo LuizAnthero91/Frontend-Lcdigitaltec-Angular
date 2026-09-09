@@ -3,15 +3,15 @@
     <a routerLink="/" class="brand" aria-label="LC Digital Tec" (click)="closeMenu()">
       <span>
         <strong>LC Digital Tec</strong>
-        <small>Tecnologia que impulsiona resultados</small>
+        <small>Desenvolvimento web e sistemas</small>
       </span>
     </a>
 
-    <button class="menu-button" type="button" (click)="toggleMenu()" aria-label="Abrir menu">
-      ☰
+    <button class="menu-button" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen" aria-controls="main-navigation" [attr.aria-label]="menuOpen ? 'Fechar menu' : 'Abrir menu'">
+      {{ menuOpen ? 'Fechar' : 'Menu' }}
     </button>
 
-    <nav class="nav-menu" [class.open]="menuOpen">
+    <nav id="main-navigation" aria-label="Navegação principal" (keydown.escape)="closeMenu()" class="nav-menu" [class.open]="menuOpen">
       <a routerLink="/sobre" (click)="closeMenu()">Sobre nós</a>
       <a routerLink="/" fragment="servicos" (click)="closeMenu()">Serviços</a>
       <a routerLink="/clientes" (click)="closeMenu()">Clientes</a>

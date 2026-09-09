@@ -30,25 +30,25 @@ export class HomeComponent {
     {
       icon: 'WEB',
       title: 'Sites profissionais',
-      description: 'Páginas rápidas, responsivas e preparadas para apresentar sua empresa com clareza.',
+      description: 'Sites institucionais e páginas de serviço. Conteúdo organizado para consulta em computadores e celulares.',
       url: '/contato'
     },
     {
       icon: 'SHOP',
       title: 'Lojas virtuais',
-      description: 'Experiências de compra simples para divulgar produtos e transformar visitas em vendas.',
+      description: 'Catálogo de produtos e fluxo de compra online, com informações claras para quem vai comprar.',
       url: '/contato'
     },
     {
       icon: 'ERP',
       title: 'Sistemas de gestão',
-      description: 'Painéis sob medida para organizar atendimentos, clientes, financeiro e operação.',
+      description: 'Sistemas para organizar atendimentos, clientes e registros financeiros conforme a rotina da operação.',
       
     },
     {
       icon: 'GPS',
       title: 'Rastreamento veicular',
-      description: 'Monitoramento de veículos e frotas com foco em controle, segurança e praticidade.',
+      description: 'Consulta de localização e acompanhamento de veículos e frotas pela plataforma de rastreamento.',
       url: 'https://traccar.lcdigitaltec.com.br/',
       external: true
     }

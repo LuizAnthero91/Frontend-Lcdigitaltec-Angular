@@ -1,134 +1,45 @@
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <span class="section-kicker">Soluções digitais completas para sua empresa</span>
-
-      <h1>
-        <span>Transforme sua empresa</span>
-        com sites, vendas online, ERP e rastreamento veicular.
-      </h1>
-
-      <p>
-        Mais presença digital, mais vendas, mais eficiência. Desenvolvemos sites profissionais,
-        lojas virtuais, sistemas de gestão e soluções de rastreamento para elevar o seu negócio.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" routerLink="/contato">Pedir proposta</a>
-        <a class="btn btn-outline" href="#clientes">Conhecer projetos</a>
+<main>
+  <section class="hero" aria-labelledby="home-title">
+    <div class="container">
+      <div class="edition"><span>Desenvolvimento web & sistemas</span><span>Belo Horizonte, MG</span></div>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">LC Digital Tec / Tecnologia aplicada</p>
+          <h1 id="home-title">Seu negócio.<br>Uma presença<br><em>bem construída.</em></h1>
+          <div class="hero-intro"><p>Sites, lojas virtuais e sistemas de gestão. Desenvolvemos ferramentas digitais para apresentar sua empresa e organizar o trabalho.</p><a class="btn btn-primary" routerLink="/contato">Conversar sobre um projeto <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <aside class="hero-note" aria-label="Áreas de atuação">
+          <span class="note-label">Da apresentação à operação</span>
+          <div class="type-composition" aria-hidden="true">Web.<br><em>Gestão.</em><br>Controle.</div>
+          <div class="note-bottom"><span>01 / 04</span><p>Uma página institucional ou um sistema para a rotina da equipe. O ponto de partida é entender o uso.</p></div>
+          <a href="#servicos" class="text-link">Conheça os serviços <span aria-hidden="true">↓</span></a>
+        </aside>
+      </div>
+      <div class="hero-foot"><span>Sites institucionais</span><span>Comércio eletrônico</span><span>Sistemas de gestão</span><span>Rastreamento veicular</span></div>
+    </div>
+  </section>
+  <section id="servicos" class="section" aria-labelledby="services-title">
+    <div class="container section-grid">
+      <div class="section-intro"><p class="eyebrow">01 / O que fazemos</p><h2 id="services-title">Tecnologia com<br>função definida.</h2><p>Cada projeto atende a uma necessidade. O escopo depende do que sua empresa precisa publicar, vender ou acompanhar.</p></div>
+      <div>
+        @for (service of services; track service.title; let i = $index) {
+          <article class="service-row"><span class="index">0{{ i + 1 }}</span><div><h3>{{ service.title }}</h3><p>{{ service.description }}</p></div><a routerLink="/contato" [attr.aria-label]="'Consultar sobre ' + service.title"><span aria-hidden="true">↗</span></a></article>
+        }
       </div>
     </div>
-
-    <div class="hero-visual" aria-label="Prévia do painel LC Digital Tec">
-      <div class="dashboard-card">
-        <div class="dash-sidebar">
-          <strong>Painel</strong>
-          <span class="active">Dashboard</span>
-          <span>Vendas</span>
-          <span>Clientes</span>
-          <span>Financeiro</span>
-          <span>Estoque</span>
-          <span>Relatórios</span>
-        </div>
-
-        <div class="dash-content">
-          <div class="dash-top">
-            <div>
-              <h3>Visão geral</h3>
-              <small>Período: últimos 30 dias</small>
-            </div>
-            <span class="online">Administrador</span>
-          </div>
-
-          <div class="kpis">
-            <div>
-              <small>Receita</small>
-              <strong>R$ 42 mil</strong>
-              <span>+18,2%</span>
-            </div>
-            <div>
-              <small>Vendas</small>
-              <strong>1.482</strong>
-              <span>+12,7%</span>
-            </div>
-            <div>
-              <small>Clientes</small>
-              <strong>317</strong>
-              <span>+15,4%</span>
-            </div>
-          </div>
-
-          <div class="chart-grid">
-            <div class="chart-card">
-              <span>Evolução de vendas</span>
-              <div class="fake-chart">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-              </div>
-            </div>
-
-            <div class="donut-card">
-              <div class="donut">68%</div>
-              <span>Vendas online</span>
-            </div>
-          </div>
-        </div>
+  </section>
+  <section id="clientes" class="section projects-section" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="projects-heading"><div><p class="eyebrow">02 / Projetos selecionados</p><h2 id="projects-title">Trabalho em uso.</h2></div><a class="text-link" routerLink="/clientes">Todos os projetos <span aria-hidden="true">↗</span></a></div>
+      <div>
+        @for (client of clients; track client.name; let i = $index) {
+          <a class="project-row" [href]="client.projectUrl" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Visitar projeto ' + client.name + ' (abre em nova aba)'"><span class="index">0{{ i + 1 }}</span><h3>{{ client.name }}</h3><span class="project-type">{{ client.type }}</span><span class="project-arrow" aria-hidden="true">↗</span></a>
+        }
       </div>
-
-      <div class="phone-card">
-        <div class="phone-map">
-          <span class="route-point one"></span>
-          <span class="route-point two"></span>
-          <span class="route-point three"></span>
-        </div>
-        <strong>Monitore sua frota</strong>
-        <small>72 km/h • Em movimento</small>
-      </div>
+      <p class="project-caption">Links para os sites e plataformas. Alguns sistemas exigem acesso de usuário.</p>
     </div>
-  </div>
-</section>
-
-<section id="servicos" class="services-section">
-  <div class="container">
-    <div class="service-grid">
-      @for (service of services; track service.title) {
-        <article class="service-card">
-          <div class="service-icon">{{ service.icon }}</div>
-          <div>
-            <h3>{{ service.title }}</h3>
-            <p>{{ service.description }}</p>
-          </div>
-        </article>
-      }
-    </div>
-  </div>
-</section>
-
-<section id="clientes" class="clients-section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Nossos clientes, nossos resultados</h2>
-      <a routerLink="/clientes">Ver todos os projetos →</a>
-    </div>
-
-    <div class="client-grid">
-      @for (client of clients; track client.name) {
-        <article class="client-card">
-          <div class="client-logo">{{ client.logo }}</div>
-          <div>
-            <h3>{{ client.name }}</h3>
-            <p>{{ client.type }}</p>
-            <span>{{ client.tag }}</span>
-            <a
-              [href]="client.projectUrl"
-              [attr.target]="client.external ? '_blank' : null"
-              [attr.rel]="client.external ? 'noopener noreferrer' : null"
-              [attr.aria-label]="'Ver projeto ' + client.name"
-            >
-              Ver projeto →
-            </a>
-          </div>
-        </article>
-      }
-    </div>
-  </div>
-</section>
+  </section>
+  <section class="section contact-section" aria-labelledby="contact-title">
+    <div class="container section-grid"><p class="eyebrow">03 / Próximo passo</p><div><h2 id="contact-title">O que precisa funcionar<br><em>melhor na sua empresa?</em></h2><p>Conte o que você precisa, quem vai usar e se existe um prazo. Essas informações ajudam a definir o escopo e preparar uma proposta.</p><a class="btn btn-primary" routerLink="/contato">Solicitar uma proposta <span aria-hidden="true">↗</span></a></div></div>
+  </section>
+</main>
