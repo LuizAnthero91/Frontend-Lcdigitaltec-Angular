@@ -37,6 +37,15 @@ export class ClientsComponent {
       external: true
     },
     {
+      name: 'Tiquico Auto Socorro',
+      eyebrow: 'Serviços automotivos',
+      description: 'Site institucional da Tiquico Auto Socorro para apresentar a empresa e seus serviços.',
+      tags: ['Site institucional', 'Auto socorro'],
+      url: 'https://tiquicoautosocorro.com/',
+      action: 'Visitar site',
+      external: true
+    },
+    {
       name: 'Rastreamento Veicular',
       eyebrow: 'Monitoramento em tempo real',
       description: 'Plataforma para acompanhar a localização de veículos, consultar rotas e administrar frotas.',
